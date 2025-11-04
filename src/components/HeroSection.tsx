@@ -1,5 +1,6 @@
 import heroBanner from "@/assets/hero-banner.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   // Replace this with your actual advertisement URL
@@ -24,9 +25,16 @@ const HeroSection = () => {
         {/* Banner text overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-2 drop-shadow-lg">
-              DK Art & Design Institute
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <img 
+                src={logo} 
+                alt="DK Art Logo" 
+                className="w-16 h-16 md:w-20 md:h-20 drop-shadow-lg"
+              />
+              <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
+                DK Art & Design Institute
+              </h1>
+            </div>
             <p className="text-lg md:text-2xl drop-shadow-md">
               Where Creativity Begins, and Imagination Has No Limits!
             </p>

@@ -9,19 +9,22 @@ const ArtworksSection = () => {
       id: 1,
       title: "Student Gallery Display",
       image: artwork1,
-      description: "Vibrant collection of our students' creative works"
+      description: "Vibrant collection of our students' creative works",
+      url: "https://example.com/gallery-display" // Replace with your actual URL
     },
     {
       id: 2,
       title: "Watercolor Masterpiece",
       image: artwork2,
-      description: "Beautiful landscape painting by our talented student"
+      description: "Beautiful landscape painting by our talented student",
+      url: "https://example.com/watercolor" // Replace with your actual URL
     },
     {
       id: 3,
       title: "Anime Character Design",
       image: artwork3,
-      description: "Creative character illustration from our cartoon class"
+      description: "Creative character illustration from our cartoon class",
+      url: "https://example.com/anime" // Replace with your actual URL
     },
   ];
 
@@ -39,28 +42,34 @@ const ArtworksSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {artworks.map((artwork, index) => (
-            <Card
+            <a
               key={artwork.id}
-              className="overflow-hidden group hover:shadow-artistic transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              href={artwork.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={artwork.image}
-                  alt={artwork.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg text-foreground mb-2">
-                  {artwork.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {artwork.description}
-                </p>
-              </div>
-            </Card>
+              <Card className="overflow-hidden group hover:shadow-artistic transition-all duration-300 animate-fade-in cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={artwork.image}
+                    alt={artwork.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-foreground mb-2">
+                    {artwork.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {artwork.description}
+                  </p>
+                </div>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
