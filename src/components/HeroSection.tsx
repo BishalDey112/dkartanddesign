@@ -11,14 +11,14 @@ const HeroSection = () => {
       {/* === BACKGROUND VIDEO === */}
       <div className="absolute inset-0">
         <video
-          src={heroVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover scale-105 animate-slowZoom"
-        ></video>
+  src="https://player.cloudinary.com/embed/?cloud_name=dubgchxko&public_id=2025634-hd_1280_720_25fps_wshq0t&profile=cld-default"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full h-full object-cover brightness-[0.45]"
+/>
+
       </div>
 
       {/* === MAIN CONTENT (Text Overlay Box) === */}
