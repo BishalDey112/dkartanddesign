@@ -18,8 +18,8 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // You'll need to replace this with your actual Telegram bot token and chat ID
-  const TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN";
-  const TELEGRAM_CHAT_ID = "YOUR_CHAT_ID";
+  const TELEGRAM_BOT_TOKEN = "8168471162:AAGwCohXnYzP4lJMlJJEulrZB6d3QzTPTBo";
+  const TELEGRAM_CHAT_ID = "8191232914";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

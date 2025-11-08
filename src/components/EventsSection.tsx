@@ -7,7 +7,7 @@ const EventsSection = () => {
       id: 1,
       title: "Annual Art Exhibition 2024",
       image: eventSample,
-      date: "December 2024",
+      date: "January 2026",
       description: "Showcasing our students' best artworks from the year",
       url: "https://example.com/exhibition-2024" // Replace with your actual URL
     },
@@ -23,7 +23,7 @@ const EventsSection = () => {
       id: 3,
       title: "Festival Art Competition",
       image: eventSample,
-      date: "Ongoing",
+      date: "Coming Soon",
       description: "Theme-based art competition with exciting prizes",
       url: "https://example.com/art-competition" // Replace with your actual URL
     },

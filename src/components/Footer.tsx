@@ -103,7 +103,7 @@ const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 DK Art & Design Institute. All rights reserved.
+              © 2025 Made by Bishal Dey. All rights reserved
             </p>
 
             <div className="flex items-center gap-2">

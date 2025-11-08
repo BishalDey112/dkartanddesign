@@ -10,21 +10,21 @@ const ArtworksSection = () => {
       title: "Student Gallery Display",
       image: artwork1,
       description: "Vibrant collection of our students' creative works",
-      url: "https://example.com/gallery-display" // Replace with your actual URL
+      url: "https://student-gallery.onrender.com/" // Replace with your actual URL
     },
     {
       id: 2,
       title: "Watercolor Masterpiece",
       image: artwork2,
       description: "Beautiful landscape painting by our talented student",
-      url: "https://example.com/watercolor" // Replace with your actual URL
+      url: "https://dk-watercolour.onrender.com/" // Replace with your actual URL
     },
     {
       id: 3,
       title: "Anime Character Design",
       image: artwork3,
       description: "Creative character illustration from our cartoon class",
-      url: "https://example.com/anime" // Replace with your actual URL
+      url: "https://dk-animeuploads.onrender.com/" // Replace with your actual URL
     },
   ];
 
