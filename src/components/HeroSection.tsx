@@ -1,91 +1,80 @@
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
-  const advertisementUrl = "https://example.com/your-advertisement";
-
   return (
-    <section id="home" className="relative">
-      {/* Banner - Clickable for advertisements */}
-      <a
-        href={advertisementUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block relative h-64 md:h-80 overflow-hidden group"
-      >
-        {/* Banner Image */}
-        <img
-          src={heroBanner}
-          alt="DK Art Banner"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+    <section
+      id="home"
+      className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden text-white"
+    >
+      {/* === BACKGROUND VIDEO === */}
+      <div className="absolute inset-0">
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover scale-105 animate-slowZoom"
+        ></video>
+      </div>
 
-        {/* Overlay for depth and clarity */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70 group-hover:opacity-80 transition-opacity duration-500" />
-
-        {/* Centered Text Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <div className="flex items-center justify-center gap-3 mb-2 animate-fadeInDown">
-            <img
-              src={logo}
-              alt="DK Art Logo"
-              className="w-14 h-14 md:w-16 md:h-16 drop-shadow-[0_4px_10px_rgba(255,255,255,0.4)] transform hover:scale-105 transition-transform duration-500"
-            />
-            <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-xl tracking-wide bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-glow">
-              DK Art & Design Institute
-            </h1>
-          </div>
-          <p className="text-base md:text-xl text-gray-200 drop-shadow-md animate-fadeInUp">
-            Where Creativity Begins, and Imagination Has No Limits!
+      {/* === MAIN CONTENT (Text Overlay Box) === */}
+      <div className="relative z-10 px-6 md:px-12 max-w-3xl text-center flex flex-col items-center justify-center h-full">
+        {/* Semi-transparent blur behind text for readability */}
+        <div className="backdrop-blur-[6px] bg-black/25 px-6 py-8 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.4)]">
+          {/* <img
+            src={logo}
+            alt="DK Art Logo"
+            className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] animate-fadeInUp"
+          /> */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight animate-fadeInUp drop-shadow-[0_3px_15px_rgba(0,0,0,0.9)]">
+            DK Art & Design Institute
+          </h1>
+          <p className="text-gray-100 text-base sm:text-lg md:text-xl font-light mt-3 max-w-xl mx-auto animate-fadeInUp delay-500">
+            Where Creativity Begins, and Imagination Has No Limits.
           </p>
         </div>
+      </div>
 
-        {/* Light Sweep Animation */}
-        <div className="absolute inset-0 pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] group-hover:before:translate-x-[100%] before:transition-transform before:duration-[1.8s]" />
-      </a>
-
-      {/* Profile Section */}
-      <div className="container mx-auto px-4">
-        <div className="relative -mt-14 md:-mt-16 flex justify-center md:justify-start md:ml-8">
-          <div className="relative group">
-            <img
-              src={profilePhoto}
-              alt="DK Art Profile"
-              className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-white/20 shadow-2xl object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500/40 to-blue-500/40 opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-          </div>
+      {/* === FLOATING PROFILE SECTION === */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row items-center gap-4 md:left-16 md:translate-x-0 animate-fadeInUp delay-700">
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-400 via-purple-500 to-blue-400 opacity-80 blur-md animate-pulse" />
+          <img
+            src={profilePhoto}
+            alt="DK Art Profile"
+            className="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-white/40 shadow-2xl object-cover relative z-10 hover:scale-105 transition-transform duration-500"
+          />
         </div>
-
-        <div className="text-center md:text-left md:ml-8 mt-4 pb-10">
-          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-glow-slow">
+        <div className="text-center sm:text-left">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold drop-shadow-lg">
             Welcome to DK Art
           </h2>
-          <p className="text-gray-400 mt-1">
+          <p className="text-gray-200 text-sm sm:text-base">
             Nurturing Young Artists in Diphu, Assam
           </p>
         </div>
       </div>
 
-      {/* Glow Animations */}
+      {/* === ANIMATIONS === */}
       <style>{`
-        @keyframes fadeInDown {
-          0% { opacity: 0; transform: translateY(-20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
         @keyframes fadeInUp {
-          0% { opacity: 0; transform: translateY(20px); }
+          0% { opacity: 0; transform: translateY(40px); }
           100% { opacity: 1; transform: translateY(0); }
         }
-        @keyframes glow {
-          0%, 100% { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
-          50% { filter: drop-shadow(0 0 16px rgba(255,255,255,0.9)); }
+        @keyframes slowZoom {
+          0%, 100% { transform: scale(1.05); }
+          50% { transform: scale(1.1); }
         }
-        .animate-fadeInDown { animation: fadeInDown 1s ease-out; }
-        .animate-fadeInUp { animation: fadeInUp 1s ease-out; }
-        .animate-glow { animation: glow 2.5s ease-in-out infinite; }
-        .animate-glow-slow { animation: glow 4s ease-in-out infinite; }
+        .animate-fadeInUp {
+          animation: fadeInUp 1.4s ease-out forwards;
+        }
+        .animate-slowZoom {
+          animation: slowZoom 20s ease-in-out infinite;
+        }
       `}</style>
     </section>
   );

@@ -6,12 +6,12 @@ const Footer = () => {
     {
       name: "Facebook",
       icon: Facebook,
-      url: "https://facebook.com/yourpage", // Replace with actual URL
+      url: "https://www.facebook.com/daz.art.792?rdid=GYX8WKn0rQJem5k9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CLFe6UvE4%2F#", // Replace with actual URL
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/yourpage", // Replace with actual URL
+      url: "https://www.instagram.com/dk.art_design/?igsh=ZHNlNXYyamNyY3Nj#", // Replace with actual URL
     },
     {
       name: "Twitter",
