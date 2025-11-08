@@ -11,7 +11,7 @@ const HeroSection = () => {
       {/* === BACKGROUND VIDEO === */}
       <div className="absolute inset-0">
         <video
-  src="https://player.cloudinary.com/embed/?cloud_name=dubgchxko&public_id=2025634-hd_1280_720_25fps_wshq0t&profile=cld-default"
+  src="https://res.cloudinary.com/dubgchxko/video/upload/v1/2025634-hd_1280_720_25fps_wshq0t.mp4"
   autoPlay
   loop
   muted
